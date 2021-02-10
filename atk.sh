@@ -1,3 +1,4 @@
+# Ta gueule Vlad
 echo "Log In with default user credentials"
 
 cookie=$(timeout 10 torify curl -i -s -X POST "$1/index.php" --data "username=user&password=user&language=fr&LoginButton=Login" | grep "Set-Cookie" |  grep -o -P '(?<=PHPSESSID=).*(?=;)')
